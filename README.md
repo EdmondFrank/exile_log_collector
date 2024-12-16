@@ -20,8 +20,17 @@ Arch:
 ## Reproduction
 
 1. prepare and clone
+
+Because GNU Parallel behavior has changed in newer versions, you need build an older version from source. to reproduce the issue.
+
 ```
-sudo apt install parallel
+wget https://ftp.gnu.org/gnu/parallel/parallel-20190122.tar.bz2
+tar xvf parallel-20190122.tar.bz2
+cd parallel-20190122
+./configure
+make
+sudo make install
+cd ..
 git clone https://github.com/EdmondFrank/exile_log_collector
 ```
 
